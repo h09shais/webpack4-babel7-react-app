@@ -14,3 +14,9 @@ This is a systematic guide to create a react app by using webpack 4 and babel 7 
 > cd simple-create-react-app
 > yarn init -y
 ```
+
+### Step 02
+
+```sh
+> yarn add webpack webpack-cli --D
+```
