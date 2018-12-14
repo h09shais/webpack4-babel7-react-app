@@ -7,6 +7,8 @@ This is a systematic guide to create a react app by using webpack 4 and babel 7 
 - [Node Js](https://nodejs.org/en/) has installed
 - [Yarn](https://yarnpkg.com/en/) has installed
 
+## Part 01 - Webpack
+
 ### Step 01 - Create folder and initialize new project
 
 ```sh
@@ -93,11 +95,20 @@ module.exports = {
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist")
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/
+      }
+    ]
   }
 };
 ```
 
 ```html
+<!-- src/index.html -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -105,4 +116,36 @@ module.exports = {
   </head>
   <body></body>
 </html>
+```
+
+## Part 02 - Babel
+
+### Step 06 - Add babel
+
+```sh
+> yarn add babel-loader @babel/core @babel/cli @babel/preset-env -D
+> touch .babelrc
+```
+
+```javascript
+// .babelrc
+{
+  "presets": ["@babel/preset-env"]
+}
+```
+
+```javascript
+// webpack.config.js
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader"
+      }
+    ]
+  }
+};
 ```
