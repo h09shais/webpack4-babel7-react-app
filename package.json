@@ -1,0 +1,7 @@
+{
+  "name": "webpack4-babel7-react-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Shanawaz Islam <shanawazislam@yahoo.com>",
+  "license": "MIT"
+}
