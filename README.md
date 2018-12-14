@@ -162,3 +162,44 @@ module.exports = {
 ```
 
 Check your web browser’s dev console!
+
+## Part 03- React
+
+### Step 08 - Add react
+
+```sh
+> yarn add react react-dom @babel/preset-react -D
+```
+
+```javascript
+// .babelrc
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
+}
+```
+
+```javascript
+// src/index.js
+import React from "react";
+import ReactDOM from "react-dom";
+ReactDOM.render(<h1>Hello, world!</h1>, document.getElementById("root"));
+```
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+```
+
+```sh
+> yarn start
+```
+
+Congratulations! You have finished it :)
+Have a look into the browser output – Hello world!
