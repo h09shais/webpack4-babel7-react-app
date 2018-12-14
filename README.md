@@ -37,3 +37,23 @@ This is a systematic guide to create a react app by using webpack 4 and babel 7 
 > touch src/index.js
 > yarn build
 ```
+
+### Step 04 - Introduce webpack config
+
+```sh
+> touch webpack.config.js
+```
+
+```javascript
+// webpack.config.js
+
+const path = require("path");
+
+module.exports = {
+  entry: "./src/index.js",
+  output: {
+    filename: "main.js",
+    path: path.resolve(__dirname, "dist")
+  }
+};
+```
