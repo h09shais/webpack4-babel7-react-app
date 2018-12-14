@@ -149,3 +149,16 @@ module.exports = {
   }
 };
 ```
+
+### Step 07 - Write your first ECMAScript!
+
+```javascript
+// src/index.js
+[1, 3, 99].map(num => console.log(num));
+```
+
+```sh
+> yarn start
+```
+
+Check your web browser’s dev console!
