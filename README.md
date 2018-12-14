@@ -57,3 +57,52 @@ module.exports = {
   }
 };
 ```
+
+### Step 05 - Add webpack dev server
+
+```sh
+> touch src/index.html
+> yarn add webpack-dev-server -D
+> yarn add html-webpack-plugin -D
+```
+
+```javascript
+// package.json
+
+{
+  "scripts": {
+    "start": "webpack-dev-server --open"
+  }
+}
+
+```
+
+```javascript
+// webpack.config.js
+
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = {
+  entry: "./src/index.js",
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html"
+    })
+  ],
+  output: {
+    filename: "main.js",
+    path: path.resolve(__dirname, "dist")
+  }
+};
+```
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+  </head>
+  <body></body>
+</html>
+```
