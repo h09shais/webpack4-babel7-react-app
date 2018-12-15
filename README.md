@@ -2,6 +2,8 @@
 
 This is a systematic guide to create a react app by using webpack 4 and babel 7 for beginners.
 
+[If you are in hurry to create your react app, follow the shortcut below!](https://github.com/h09shais/webpack4-babel7-react-app#part-04---bonus)
+
 ## Assumption
 
 - [Node Js](https://nodejs.org/en/) has installed
