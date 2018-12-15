@@ -203,3 +203,78 @@ ReactDOM.render(<h1>Hello, world!</h1>, document.getElementById("root"));
 
 Congratulations! You have finished it :)
 Have a look into the browser output – Hello world!
+
+## Part 04 - Bonus
+
+Let us create the react app in 3 minutes!
+
+```sh
+> yarn init -y
+> yarn add webpack webpack-cli html-webpack-plugin webpack-dev-server @babel/cli @babel/core @babel/preset-env babel-loader react react-dom @babel/preset-react
+> mkdir src
+> touch src/index.js
+> touch src/index.html
+> touch webpack.config.js
+> touch .babelrc
+```
+
+```html
+<!-- src/index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+```
+
+```javascript
+// src/index.js
+import React from "react";
+import ReactDOM from "react-dom";
+ReactDOM.render(<h1>Hello, world!</h1>, document.getElementById("root"));
+```
+
+```javascript
+// .babelrc
+{ "presets": ["@babel/preset-env", "@babel/preset-react"] }
+```
+
+```javascript
+// package.json
+"scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
+  }
+```
+
+```javascript
+// webpack.config.js
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = {
+  entry: "./src/index.js",
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html"
+    })
+  ],
+  output: {
+    filename: "main.js",
+    path: path.resolve(__dirname, "dist")
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader"
+      }
+    ]
+  }
+};
+```
