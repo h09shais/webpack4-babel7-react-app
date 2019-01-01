@@ -22,7 +22,7 @@ This is a systematic guide to create a react app by using webpack 4 and babel 7 
 ### Step 02 - Add webpack
 
 ```sh
-> yarn add webpack webpack-cli --D
+> yarn add webpack webpack-cli -D
 ```
 
 ### Step 03 - Build your project for the first time
@@ -212,7 +212,7 @@ Let us create the react app in 3 minutes!
 
 ```sh
 > yarn init -y
-> yarn add webpack webpack-cli html-webpack-plugin webpack-dev-server @babel/cli @babel/core @babel/preset-env babel-loader react react-dom @babel/preset-react
+> yarn add webpack webpack-cli html-webpack-plugin webpack-dev-server @babel/cli @babel/core @babel/preset-env babel-loader react react-dom @babel/preset-react -D
 > mkdir src
 > touch src/index.js
 > touch src/index.html
